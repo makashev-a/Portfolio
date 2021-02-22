@@ -1,0 +1,63 @@
+.sidepanel {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 340px;
+    z-index: 3;
+
+    &__link {
+        transform: rotate(-90deg) translateY(-1.5px);
+        transition: 1s all;
+        svg, svg path {
+            transition: all 1s;
+        } 
+        &:hover {
+            svg, svg path {
+                fill: $main-color;
+            }
+        }
+        svg, svg path {
+            fill: #fff;
+        }
+        &_black {
+            transition: 0.5s all;
+            svg, svg path {
+                fill: #000;
+            }
+        }
+    }
+
+    &__divider {
+        width: 2px;
+        height: 70px;
+        background-color: #fff;
+        transition: 1s all;
+        &_black {
+            background-color: #000;
+            transition: 1s all;
+        }
+    }
+
+    &__text {
+        width: 25px;
+        height: 150px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #fff;
+        transition: 1s all;
+        span {
+            display: block;
+            width: 150px;
+            transform: rotate(-90deg) translate(-35%, -260%);
+        }
+        &_black {
+            color: #000;
+            transition: 1s all;
+        }
+    }
+}
