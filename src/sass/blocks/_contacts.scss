@@ -1,3 +1,161 @@
 .contacts {
-    padding-top: 120px;
+    padding: 120px 0 90px 0;
+
+    &__wrapper {
+        padding: 0 35px 0 52px;
+        display: grid;
+        grid-template-columns: 400px 585px;
+        justify-content: space-between;
+    }
+
+    &__photo {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__descr {
+        padding-top: 6px;
+    }
+
+    &__title {
+        position: relative;
+        padding: 1px 0 0 12px;
+        @include before_circle;
+    }
+
+    &__text,
+    &__social {
+        margin-top: 20px;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 25px;
+
+        svg,
+        svg path {
+            height: 100%;
+            width: 100%;
+            transition: 0.5s all;
+        }
+
+        &:hover {
+
+            svg,
+            svg path {
+                fill: $main-color;
+            }
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__form {
+        margin-top: 30px;
+        display: grid;
+        grid-template: 45px 190px 45px / repeat(2, 280px);
+        justify-content: space-between;
+        row-gap: 28px;
+
+        label {
+            display: block;
+            position: absolute;
+            top: -9px;
+            left: 12px;
+            height: 18px;
+            padding: 0 8px;
+            background-color: #fff;
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__input {
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 12px;
+            border-radius: 0;
+            border-width: 1px;
+            border-color: #000;
+
+            &:focus {
+                outline-color: $main-color;
+                outline-style: solid;
+                border-color: $main-color;
+                border-style: solid;
+            }
+        }
+    }
+
+    &__textarea {
+        position: relative;
+        grid-column: 1 / 3;
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 20px;
+            font-size: 12px;
+            border-radius: 0;
+            border-width: 1px;
+            border-color: #000;
+
+            &:focus {
+                outline-color: $main-color;
+                outline-style: solid;
+                border-color: $main-color;
+            }
+        }
+    }
+
+    &__send {
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+    }
+
+    &__btn {
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    &__policy {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+
+        input[type=checkbox] {
+            margin-right: 10px;
+            appearance: none;
+            width: 14px !important;
+            height: 14px !important;
+            outline: 1px solid #000;
+            outline-offset: 0;
+            text-align: center;
+            line-height: 14px;
+            &:checked {
+                background-color: $main-color;
+                outline: none;
+                width: 16px !important;
+                height: 16px !important;
+                line-height: 16px;
+            }
+            &:checked:after {
+                content: '✔';
+                color: #fff;
+            }
+        }
+    }
 }
