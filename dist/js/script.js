@@ -5,23 +5,29 @@ document.addEventListener('DOMContentLoaded', function () {
 	const hamburger = document.querySelector('.hamburger'),
 		menu = document.querySelector('.menu'),
 		closeBtn = document.querySelector('.menu__close'),
-		menuOverlay = document.querySelector('.menu__overlay');
+		menuOverlay = document.querySelector('.menu__overlay'),
+		body = document.body;
+		
 
 	hamburger.addEventListener('click', () => {
 		menu.classList.add('active');
+		body.classList.add('sidebar-open');
 	});
 
 	closeBtn.addEventListener('click', () => {
 		menu.classList.remove('active');
+		body.classList.remove('sidebar-open');
 	});
 
 	menuOverlay.addEventListener('click', () => {
 		menu.classList.remove('active');
+		body.classList.remove('sidebar-open');
 	});
 
 	window.addEventListener('keydown', (e) => {
 		if (e.key == 'Escape') {
 			menu.classList.remove('active');
+			body.classList.remove('sidebar-open');
 		}
 	});
 
@@ -53,15 +59,15 @@ document.addEventListener('DOMContentLoaded', function () {
 	// Ratings bar
 
 	const progressBar = document.querySelectorAll('.ratings__item-progress'),
-		  percentage = document.querySelectorAll('.ratings__item-percentage');
+		percentage = document.querySelectorAll('.ratings__item-percentage');
 
 	let handlerFired;
-	window.addEventListener('scroll', function(e) {
-		const skillsTop = document.querySelector('.skills').getBoundingClientRect().top;
-		if (skillsTop <= 0) {
+	window.addEventListener('scroll', function (e) {
+		const ratingsTop = document.querySelector('.ratings').getBoundingClientRect().top;
+		if (ratingsTop <= window.innerHeight) {
 			if (!handlerFired) {
 				handlerFired = 1;
-				for (let i = 0; i<progressBar.length; i++) {
+				for (let i = 0; i < progressBar.length; i++) {
 					if (percentage[i].innerHTML == '100%') {
 						progressBar[i].classList.add('ratings__item-progress_animate-100');
 					} else if (percentage[i].innerHTML == '90%') {
@@ -72,10 +78,10 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			}
 		}
-		if (skillsTop > 0) {
+		if (ratingsTop > 0) {
 			handlerFired = 0;
 		}
-		
+
 	});
-	
+
 });

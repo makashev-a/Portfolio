@@ -2,13 +2,12 @@
     padding-top: 120px;
 
     &__wrapper {
-        margin-top: 60px;
-        padding: 0 10px;
+        padding: 60px 10px 0 10px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, 270px);
         grid-template-rows: minmax(270px, auto);
         grid-auto-rows: minmax(270px, auto);
-        gap: 10px;
+        gap: 13px;
     }
 
     &__item {
@@ -25,7 +24,7 @@
             margin-top: 20px;
             font-weight: bold;
             font-size: 14px;
-            line-height: 21px;
+            line-height: 14px;
         }
 
         &-descr {

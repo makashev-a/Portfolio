@@ -2,7 +2,7 @@
     min-height: 100vh;
     position: relative;
     background: url('../img/main_bg.jpg') no-repeat 50%/cover;
-    padding: 206px 0 362px 0;
+    padding-top: 206px;
     &__title {
         width: 535px;
         margin-top: 10px;
@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 250px;
+        width: 280px;
     }
     &__link {
         font-weight: bold;
