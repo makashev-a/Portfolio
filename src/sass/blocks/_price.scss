@@ -3,11 +3,10 @@
 
     &__wrapper {
         display: grid;
-        padding: 0 128px;
-        margin-top: 60px;
+        padding-top: 60px;
         grid-template: 44px / repeat(2, 386px);
         grid-auto-rows: 44px;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     &__item {
