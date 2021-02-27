@@ -123,6 +123,31 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
+	//Validation
+
+	function validateForms(form) {
+		$(form).validate({
+		  rules: {
+			name: "required",
+			email: {
+			  required: true,
+			  email: true
+			},
+			policy: "required"
+		  },
+		  messages: {
+			name: "Пожалуйста, введите свое имя",
+			email: {
+			  required: "Пожалуйста, введите свой почту",
+			  email: "Неправильно введен адрес почты"
+			},
+			policy: "Пожалуйста, отметьте поле"
+		  }
+		});
+	  }
+	
+	  validateForms('#contact-form');
+
 	//Mailer
 
 	$('form').submit(function (e) {

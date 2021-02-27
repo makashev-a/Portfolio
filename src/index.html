@@ -486,21 +486,21 @@
 
                     <form id="contact-form" action="#" class="contacts__form">
                         <div class="contacts__input">
-                            <input required name="name" id="name" type="text">
-                            <label for="name">Ваше имя</label>
+                            <input name="name" id="name" type="text">
+                            <label for="name" class="contacts__input-name">Ваше имя</label>
                         </div>
                         <div class="contacts__input">
-                            <input required name="email" id="email" type="email">
-                            <label for="email">Ваша почта</label>
+                            <input name="email" id="email" type="email">
+                            <label for="email" class="contacts__input-email">Ваша почта</label>
                         </div>
                         <div class="contacts__textarea">
                             <textarea name="text" id="text"></textarea>
-                            <label for="text">Ваше сообщение</label>
+                            <label for="text" class="contacts__input-text">Ваше сообщение</label>
                         </div>
                         <div class="contacts__send">
                             <button class="contacts__btn btn">Отправить сообщение</button>
                             <div class="contacts__policy">
-                                <input required type="checkbox" name="policy" id="policy">
+                                <input type="checkbox" name="policy" id="policy">
                                 <span>Я согласен(-а) с <a href="/policy.html" target="_blank">политикой
                                         конфиденциальности</a></span>
                             </div>
@@ -524,6 +524,7 @@
     </div>    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
