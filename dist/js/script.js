@@ -111,24 +111,37 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 
+	//Modal
+
+	$('.modal__close').on('click', function () {
+		$('.overlay, #thanks').fadeOut();
+	});
+
+	$(window).on('click', function (e) {
+		if (e.target.classList.contains('overlay')) {
+			$('.overlay, #thanks').fadeOut();
+		}
+	});
+
 	//Mailer
 
 	$('form').submit(function (e) {
 		e.preventDefault();
-	
+
 		if (!$(this).valid()) {
-		  return;
+			return;
 		}
-	
+
 		$.ajax({
-		  type: "POST",
-		  url: "mailer/smart.php",
-		  data: $(this).serialize()
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
 		}).done(function () {
-		  $(this).find("input").val("");	
-		  $('form').trigger('reset');
+			$(this).find("input").val("");
+			$('.overlay, #thanks').fadeIn();
+			$('form').trigger('reset');
 		});
 		return false;
-	  });
+	});
 
 });
