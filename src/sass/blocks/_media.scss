@@ -59,6 +59,37 @@
     }
 }
 
+// Desktop hover effects
+@media (hover: hover) {
+    .menu__link:hover:before {
+        background-color: #fff;
+    }
+    .menu__social-link:hover {
+        svg, svg path {
+            fill: #fff;
+        }
+    }
+    .portfolio__item:hover > img {
+        filter: brightness(40%);
+    }
+    .contacts__link:hover {
+        svg, svg path {
+            fill: $main-color;
+        }
+    }
+}
+
+// Touch devices hover change
+@media (hover: none) {
+    .portfolio__item > img {
+        filter: brightness(60%);
+    }
+    .portfolio__button {
+        opacity: 1;
+    }
+
+}
+
 @media (max-width: 992px) {
     body {
         &.sidebar-open {
@@ -181,7 +212,20 @@
 
 @media (max-width: 992px) and (orientation: landscape) {
     .promo {
-        padding-top: 140px;
+        padding-top: 110px;
+    }
+    .menu {
+        &__block {
+            width: 320px;
+            padding-top: 40px;
+        }
+        &__link {
+            font-size: 22px;
+            line-height: 28px;
+        }
+        &__social {
+            bottom: 30px;
+        }
     }
 }
 
@@ -324,7 +368,19 @@
 
 @media (max-width: 768px) and (orientation: landscape) {
     .promo {
-        padding-top: 110px;
+        padding-top: 120px;
+    }
+    .menu {
+        &__block {
+            width: 300px;
+        }
+        &__list {
+            padding-left: 45px;
+        }
+        &__link {
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 }
 
@@ -451,5 +507,23 @@
 @media (max-width: 576px) and (orientation: landscape) {
     .promo {
         padding-top: 80px;
+    }
+    .menu {
+        &__block {
+            padding-top: 30px;
+        }
+        &__link {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &__close {
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        &__social {
+            bottom: 20px;
+        }
     }
 }

@@ -30,10 +30,6 @@
             object-fit: cover;
         }
 
-        &:hover>img {
-            filter: brightness(40%);
-        }
-
         &:hover {
             .portfolio__button {
                 display: block;
