@@ -502,6 +502,26 @@
             margin: 0 auto;
         }
     }
+    .policy {
+        padding-top: 30px;
+        h1 {
+            margin-bottom: 0;
+        }
+        p {
+            font-size: 12px;
+        }
+        &__divider {
+            margin: 15px 0 15px 0;
+        }
+        .title_fz24 {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .title_fz20 {
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
 }
 
 @media (max-width: 576px) and (orientation: landscape) {
