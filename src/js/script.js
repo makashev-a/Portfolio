@@ -138,7 +138,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			data: $(this).serialize()
 		}).done(function () {
 			$(this).find("input").val("");
-			$('.overlay, #thanks').fadeIn();
+			$('.overlay').fadeIn();
+			$('#thanks').css("display", "flex").hide().fadeIn();
 			$('form').trigger('reset');
 		});
 		return false;
